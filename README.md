@@ -1,4 +1,4 @@
-# SpiceWorksCloudTicketsAdRemover
+# Spice Works Cloud Helpdesk Ad Remover
 Removes ads from spiceworks cloud ticket desk
 
 # Spiceworks Ad Remover
