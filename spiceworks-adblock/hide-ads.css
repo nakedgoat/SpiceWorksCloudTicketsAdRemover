@@ -1,0 +1,48 @@
+/* ============================================
+   Spiceworks Ad Remover v11
+   Goal: hide ad content only, leave layout intact
+   ============================================ */
+
+/* === AD CONTENT: hide the actual ad iframes/scripts === */
+
+/* Google/DoubleClick ad iframes */
+iframe[src*="doubleclick"],
+iframe[src*="googlesyndication"],
+iframe[src*="googleadservices"],
+iframe[id*="google_ads_iframe"],
+iframe[src*="moatads"],
+
+/* Spiceworks pogo ad slots — content only, NOT the sidebar container */
+[data-pogo="banner"],
+[data-pogo="leaderboard"],
+[data-pogo="rectangle"],
+[data-pogo="halfpage"],
+[data-pogo="ad"],
+
+/* Google ad unit containers */
+[data-adunit],
+[data-google-query-id],
+[id^="google_ads_iframe_"],
+[id*="/chd/primary"],
+.banner-ad,
+
+/* Generic ad classes */
+[class*="dfp-ad"],
+[class*="gpt-ad"],
+[class*="ad-slot"],
+[class*="ad-unit"] {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* === OVERFLOW FIX: prevent horizontal scroll === */
+body {
+  overflow-x: hidden !important;
+}
+
+/* === FOOTER: keep it visible === */
+footer.tw-flex.tw-justify-center {
+  display: flex !important;
+}

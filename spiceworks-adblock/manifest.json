@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Spiceworks Ad Remover",
+  "version": "1.11",
+  "description": "Removes ads and banners from Spiceworks and related sites",
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "*://*.spiceworks.com/*",
+    "*://on.spiceworks.com/*",
+    "*://community.spiceworks.com/*",
+    "*://spiceworks.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.spiceworks.com/*",
+        "*://on.spiceworks.com/*"
+      ],
+      "css": ["hide-ads.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
